@@ -1,0 +1,11 @@
+.header{
+    padding-top: rem(24px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__contact{
+        padding-top: 10px;
+    }
+}
+

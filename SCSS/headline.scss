@@ -1,0 +1,29 @@
+.headline{
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 27%;
+    margin-bottom: rem(50px);
+
+    @include tablet{
+        padding: 0;
+    }
+    
+    &__title{
+        margin-bottom: rem(19px);
+
+        @include mobile{
+            margin-bottom: rem(1px);
+        }
+    }
+    &__suptitle{
+        
+
+        @include tablet{
+            padding: 0 20%;
+        }
+        @include mobile{
+            padding: 0 2%;
+            line-height: rem(18px);
+        }
+    }
+}

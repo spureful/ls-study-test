@@ -1,0 +1,39 @@
+.footer{
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__adress{
+        font-size: 21px;
+        line-height: 24px;
+        color: #292929;
+        margin-top: 18px;
+    }
+    &__contact{
+        margin-top: 6px;
+        padding-bottom: 18px;
+    }
+    &__tel{
+        color: #497870;
+    }
+    &__tel-icon{
+        fill: #497870;
+    }
+    &__social-list{
+        display: flex;
+    }
+    &__social-item{
+        margin-right: 14px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__social-link{
+        fill: #B3B3B3;
+        transition: all 0.2s linear;
+        &:hover{
+            fill: #292929;
+        }
+    }
+}

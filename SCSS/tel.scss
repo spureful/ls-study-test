@@ -1,0 +1,21 @@
+.tel{
+    font-size: rem(22px);
+    line-height: rem(18px);
+    white-space: nowrap;
+    padding-top: 10px;
+
+    @include tablet{
+        display: none;
+    }
+}
+.tel-icon{
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+    margin-right: 5px;
+
+    @include tablet{
+        display: none;
+    }
+
+}

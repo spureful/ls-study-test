@@ -1,0 +1,62 @@
+.btn{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 800;
+    padding: 21px 41px;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.product__btn{
+    background-color: #497870;
+    color: #fff;
+}
+
+.initial__btn{
+    background-color: #fff;
+    color: #365A49;
+    @include tablet{
+        text-align: center;
+    }
+
+    @include mobile{
+        font-size: rem(19px);
+    }
+}
+.product__arrow{
+    padding: 5px;
+    background-color: inherit;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    z-index: 1;
+}
+.arrow--left{
+    right: 98%;
+
+    @include tablet{
+        top: 55%;
+        transform: translateY(-55%);
+        right: 95%;
+    }
+
+    @include mobile{
+        right: 93%;
+    }
+}
+.arrow--right{
+    left: 98%;
+
+    @include tablet{
+        top: 55%;
+        transform: translateY(-55%);
+        left: 95%;
+    }
+
+    @include mobile{
+        left: 93%;
+    }
+}
+
+
+

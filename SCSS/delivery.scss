@@ -1,0 +1,26 @@
+.delivery{
+    background: url(../img/delivery/berry.png) left 5% bottom 10% no-repeat,
+    url(../img/delivery/list.png) right 5% bottom 5% no-repeat,
+    url(../img/delivery/delivery-fon.png) center center no-repeat;
+    color: #365A49;
+    position: relative;
+
+    @include tablet{
+        background: url(../img/delivery/delivery-fon.png) center center no-repeat;
+    }
+
+    &::before{
+        content: url("../img/delivery/berry-list.png");
+        position: absolute;
+        right: 0;
+        top: rem(-150px);
+
+        @include mobile{
+            content: url("../img/delivery/berry-list-mobile.png");
+            top: rem(-120px);
+       }
+    }
+    &__title{
+        color: #365A49;
+    }
+}
