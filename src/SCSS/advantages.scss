@@ -1,0 +1,114 @@
+.advantages{
+    background: url(../img/advantages/adv-list.png) left 50% no-repeat;
+    position: relative;
+
+    @include tablet{
+        background: url(../img/advantages/adv-list.png) left 20% no-repeat;
+    }
+
+    @include mobile{
+        background: none;
+    }
+
+    &::after{
+        position: absolute;
+        content: url("../img/advantages/berry.png");
+        left: 0;
+        bottom: -4.4rem;
+
+        @include mobile {
+            content: none;
+        }
+
+    }
+    &__list{
+        display: flex;
+        text-align: center;
+
+        @include mobile{
+            display: block;
+            text-align: left;
+        }
+    }
+
+    &__item{
+        flex: 1;
+        padding: 0 1%;
+        position: relative;
+
+        @include mobile{
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: rem(40px);
+            padding: 0;
+        }
+
+        &::before{
+            position: absolute;
+            content: url("../img/advantages/share.png");
+            right: -30px;
+            top: rem(50px);
+
+            @include tablet{
+                content: none;
+            }
+        }
+        &:last-child::before{
+            content: none;
+        }
+
+        &:first-child .advantages__item-img{
+            background: #F2F5F4 url(../img/advantages/1.svg) center center no-repeat;
+        }
+        &:nth-child(2) .advantages__item-img{
+            background: #F2F5F4 url(../img/advantages/2.svg) center center no-repeat;
+        }
+        &:last-child .advantages__item-img{
+            background: #F2F5F4 url(../img/advantages/3.svg) center center no-repeat;
+        }
+    }
+    &__item-content{
+        padding-left: rem(20px);
+
+        @include mobile{
+            padding-right: 8%;
+        }
+
+    }
+
+    &__item-img{
+        width: rem(128px);
+        height: rem(128px);
+        margin: 0 auto;
+        border-radius: 50%; 
+        
+        @include mobile{
+            min-width: 110px;
+            height: 110px;
+        }
+        
+    }
+    &__item-title{
+        font-size: rem(27px);
+        line-height: rem(32px);
+        font-weight: 700;
+        color: #292929;
+        margin-top: rem(20px);
+
+        @include mobile{
+            font-size: rem(29px);
+        }
+
+    }
+    &__item-text{
+        font-size: rem(18px);
+        line-height: rem(22px);
+        font-weight: 300;
+        margin-top: rem(18px);
+
+        @include mobile{
+            font-size: rem(21px);
+        }
+
+    }
+}

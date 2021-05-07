@@ -1,0 +1,100 @@
+.team{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        
+        @include tablet {
+            display: none;
+        }
+
+    }
+    &__inner--mobile{
+        display: none;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right: rem(10px);
+        width: 23%;
+        height: 100%;
+        position: relative;
+        
+        &:last-child{
+            margin-right: 0;
+        }
+        @include tablet{
+            width: 100%;
+            padding: 0 20%;
+        }
+
+    }
+    &__img{
+        overflow: hidden;
+        @include tablet{
+            order: 1;
+        }
+    }
+    &__img img{
+        max-width: rem(220px);
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: rem(22px);
+    }
+    &__content{
+        margin-top: 8px;
+        overflow: hidden;
+        height: 0;
+        position: absolute;
+        top: 100%;
+        transition: height 0.1s linear;
+        &.active{
+            height: 100%;
+        }
+        @include tablet{
+            position: initial;
+        }
+    }
+    &__name{
+        color: #292929;
+        font-size: rem(21px);
+        line-height: rem(25px);
+        font-weight: 700;
+        position: relative;
+        margin: 0 auto;
+        background-color: inherit;
+        &::after{
+            content: url("../img/team/Polygon.png");
+            position: absolute;
+            top: -2px;
+            right: -14px;
+        }
+        &.active{
+            &::after{
+                content: url("../img/team/Polygon.png");
+                position: absolute;
+                top: 4px;
+                right: -14px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__post-name{
+        font-size: rem(18px);
+        line-height: rem(22px);
+        font-weight: 700;
+        color: #000;
+    }
+    &__post-text{
+        margin-top: 4px;
+        font-size: rem(18px);
+        line-height: rem(22px);
+        font-weight: 300;
+        color: #666;
+    }
+}
